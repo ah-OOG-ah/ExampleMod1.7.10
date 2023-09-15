@@ -13,7 +13,7 @@ jobs:
   buildscript-maintenance:
     runs-on: ubuntu-latest
     # Avoid running this workflow on forks
-    if: github.repository == 'GTNewHorizons/ExampleMod1.7.10'
+    if: github.repository == 'ah-OOG-ah/ExampleMod1.7.10'
     permissions:
       contents: write
       pull-requests: write

@@ -1347,15 +1347,15 @@ tasks.register('faq') {
 }
 
 static URL availableBuildScriptUrl() {
-    new URL("https://raw.githubusercontent.com/GTNewHorizons/ExampleMod1.7.10/master/build.gradle")
+    new URL("https://raw.githubusercontent.com/ah-OOG-ah/ExampleMod1.7.10/master/build.gradle")
 }
 
 static URL exampleSettingsGradleUrl() {
-    new URL("https://raw.githubusercontent.com/GTNewHorizons/ExampleMod1.7.10/master/settings.gradle.example")
+    new URL("https://raw.githubusercontent.com/ah-OOG-ah/ExampleMod1.7.10/master/settings.gradle.example")
 }
 
 static URL exampleGitAttributesUrl() {
-    new URL("https://raw.githubusercontent.com/GTNewHorizons/ExampleMod1.7.10/master/.gitattributes")
+    new URL("https://raw.githubusercontent.com/ah-OOG-ah/ExampleMod1.7.10/master/.gitattributes")
 }
 
 
