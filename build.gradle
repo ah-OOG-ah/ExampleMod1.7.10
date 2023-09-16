@@ -239,10 +239,7 @@ if (enableModernJavaSyntax.toBoolean()) {
         sourceCompatibility = modernJava.toInteger() // for the IDE support
 
         // There's probably a better way to do this
-        if (enableModernJavaBytecode) {
-
-            options.release.set(modernJava.toInteger())
-        } else {
+        if (!enableModernJavaBytecode) {
 
             options.release.set(8)
         }
