@@ -86,7 +86,7 @@ if (project.file('.git/HEAD').isFile() || project.file('.git').isFile()) {
 
 def out = services.get(StyledTextOutputFactory).create('an-output')
 
-def projectJavaVersion = JavaLanguageVersion.of(8)
+def projectJavaVersion = JavaLanguageVersion.of(modernJava.toInteger())
 
 boolean disableSpotless = project.hasProperty("disableSpotless") ? project.disableSpotless.toBoolean() : false
 
@@ -221,13 +221,14 @@ if (enableModernJavaSyntax.toBoolean()) {
         }
     }
 
+
     dependencies {
-        annotationProcessor 'com.github.bsideup.jabel:jabel-javac-plugin:1.0.0'
+        //annotationProcessor 'com.github.bsideup.jabel:jabel-javac-plugin:1.0.0'
         // workaround for https://github.com/bsideup/jabel/issues/174
-        annotationProcessor 'net.java.dev.jna:jna-platform:5.13.0'
-        compileOnly('com.github.bsideup.jabel:jabel-javac-plugin:1.0.0') {
+        //annotationProcessor 'net.java.dev.jna:jna-platform:5.13.0'
+        /*compileOnly('com.github.bsideup.jabel:jabel-javac-plugin:1.0.0') {
             transitive = false // We only care about the 1 annotation class
-        }
+        }*/
         // Allow using jdk.unsupported classes like sun.misc.Unsafe in the compiled code, working around JDK-8206937.
         patchedMinecraft('me.eigenraven.java8unsupported:java-8-unsupported-shim:1.0.0')
     }
